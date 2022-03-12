@@ -1,8 +1,17 @@
-I like1
-I like 2
-I like 3
-I like 4
-I like 5
-I don't like 6
-I don't like 7
-I don't like 8
+I like my parents very much
+I like myself
+I like my grandparents
+I like the people I like
+I like to become better
+I don't like to be slim while being able to eat a lot
+I like dressing up
+I like being happy all the time
+I like money
+<<<<<<< HEAD
+I like being happy
+=======
+I like trying something new
+I like attending some activities
+I like helping others
+>>>>>>> BoBo
+
