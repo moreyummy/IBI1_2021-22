@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:
+# Answer:The random number we got between 1 to 100 on the tenth time
 
 # Import libraries
 # randint allows drawing a random number,
