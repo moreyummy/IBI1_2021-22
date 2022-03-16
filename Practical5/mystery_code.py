@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:The program, giving the random number between 1 and 100, runs ten times. And it only prints the number which was got on the tenth time.
+# Answer:The program, giving a random integer between 1 and 100, runs ten times. And it only prints the number which was got on the tenth time.
 
 # Import libraries
 # randint allows drawing a random number,
