@@ -7,5 +7,5 @@ while p < 64:
     print(p)
 print('''when we have enough pieces for each member of the class,
          the number of straight cuts
-         is at least: ''' ,
+         is at least: ''',
          str(n))
