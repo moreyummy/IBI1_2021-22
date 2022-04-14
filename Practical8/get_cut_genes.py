@@ -1,4 +1,4 @@
-xfile = open("hhh.fa", "r")
+xfile = open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa", "r")
 alllines = xfile.readlines()
 
 genes = {}
@@ -29,17 +29,15 @@ length = []
 import re
 for m in range(len(can_cut_name)):
     length.append(str(len(can_cut_seq[m])))
-    en = "".join(re.findall(r">([^ ]+) ", can_cut_name[m]))
-    if "mRNA" in "".join(en):
-        en="".join(list("".join(en))[:-5])
-    else:
-        en="".join(list("".join(en)))
+    en = "".join(re.findall(r"gene:([^ ]+) gene_biotype", can_cut_name[m]))
     can_cut_name_sim.append(en)
 
 oh = open("cut_genes.fa", "w")
 for n in range(len(can_cut_name_sim)):
     oh.write(">" + can_cut_name_sim[n] +"        " + length[n] + "\n")
     oh.write(can_cut_seq[n] + "\n")
+
+
 
 
 
