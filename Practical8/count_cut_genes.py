@@ -18,3 +18,5 @@ for m in oh:
     else:
         ohoh.write(m)
 
+ohoh.close()
+ohohoh.close()
