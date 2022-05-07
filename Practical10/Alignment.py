@@ -27,16 +27,23 @@ def amino_acid(file1,file2):
     n = open(file2)
     seq2 = n.readlines()[1]
     same = 0
+    seq1 = re.sub(r"\n", "", seq1)
+    seq2 = re.sub(r"\n", "", seq2)
     for q in range(len(seq1)):
         if seq1[q] == seq2[q]:
             same = same+1
     same = same/len(seq1)*100
     print("%.4f%%"%(same))
 
-amino_acid("DLX5_mouse.fa", "DLX5_human.fa")
-compare("DLX5_human.fa", "DLX5_mouse.fa")
+compare("DLX5_mouse.fa", "DLX5_human.fa")
+compare("RandomSeq.fa", "DLX5_mouse.fa")
+compare("RandomSeq.fa", "DLX5_human.fa")
+amino_acid("DLX5_human.fa", "DLX5_mouse.fa")
+amino_acid("RandomSeq.fa", "DLX5_mouse.fa")
+amino_acid("RandomSeq.fa", "DLX5_human.fa")
 
-
+#Based on Blosum 62, the alignment score is 1490 between human DLX5 and mouse DLX5, the	percentage of identical amino acids is 96.5398%. However, the alignment score is -348 between mouse DCLX5 and random sequence, while their percentage of identical amino acid is 3.1142%; and the alignment score is -351 between human DCLX5 and random sequence, while the percentage of their identical amino acid is 2.7682%。
+#The mouse and human DLX5 genes are extremely similar and may have evolved from a single gene.
 
 
 
