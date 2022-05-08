@@ -38,9 +38,11 @@ elif d < e:
 
 
 #Booleans
-X = "The following is for booleans"
-Y = "Thank you for checking"
+X = True
+Y = False
 W = X or Y
-print(W)
+print("W is", W)
 W = X and Y
-print(W)
+print("W is", W)
+
+
