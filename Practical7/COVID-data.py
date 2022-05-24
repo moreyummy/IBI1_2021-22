@@ -36,6 +36,7 @@ plt.xticks(range(0, len(china_dates), 4), china_dates[0:len(china_dates):4], rot
 plt.xlabel("time")
 plt.ylabel("the number of new cases or deaths")
 plt.tick_params(labelsize=6)
+plt.legend(["new cases", "new deaths"], loc = "upper right")
 plt.subplots_adjust(right=0.9, top=0.9, left=0.1, bottom=0.2,hspace = 0.5)
 plt.show()
 
