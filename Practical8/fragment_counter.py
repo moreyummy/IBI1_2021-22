@@ -1,4 +1,4 @@
-seq = "ATGCAATCGACTACGATCAATCGAGGGCCGAATTCBHYG"
+seq = "ATGCAATCGACTACGATCAATCGAGGGCC"
 fragments = []
 import re
 while re.search("GAATTC", seq):
