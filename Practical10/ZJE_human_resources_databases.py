@@ -7,4 +7,5 @@ class Staff(object):
     def __str__(self):
         return("%s %s  %s  %s"%(self.first, self.last, self.home, self.role))
 
+#give an example
 print(Staff('Li', 'Jackon', 'queen_road', 'leader'))
