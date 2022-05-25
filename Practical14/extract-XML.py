@@ -1,3 +1,4 @@
+#Sorry it needs a long time to run.
 from xml.dom.minidom import parse
 import xml.dom.minidom
 import numpy as np
