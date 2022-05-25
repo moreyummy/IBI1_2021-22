@@ -3,6 +3,7 @@ import xml.dom.minidom
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 tree = xml.dom.minidom.parse("go_obo.xml")
 root = tree.documentElement
 ohoh = root.getElementsByTagName("term")
@@ -48,6 +49,8 @@ for id in children:
     suma(id)
     nodes=len(number)
     all.append(nodes)
+all_mean = np.means(all)
+print("the mean of child nodes across all terms is %d"%(all_mean))
 
 translation_all = []
 index = []
@@ -57,10 +60,11 @@ for g in range(len(ohoh)):
     if translation.find("translation") != -1:
         translation_all.append(translation)
         index.append(g)
-print(len(index))
 for h in range(len(index)):
     node.append(all[index[h]])
-print(len(node))
+node_mean = np.mean(node)
+print("the mean of child nodes across terms associated wit 'translation' is %d"%(node_mean))
+print("the mean of nodes across all terms is bigger than the mean of child nodes across terms associated wit 'translation' ")
 
 
 plt.boxplot(all, vert=True, patch_artist=True, boxprops={"color": "gray"}, showmeans=True)
